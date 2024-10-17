@@ -4,14 +4,43 @@ import { StyleSheet, View, Text, TouchableOpacity, ScrollView } from 'react-nati
 const App = () => {
   return (
     <ScrollView style={styles.container}>
-      {/* Gráfico circular central */}
+      <View style={styles.buttonsContainer}>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>1</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>2</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>3</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>4</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>5</Text>
+        </TouchableOpacity>
+      </View>
+
+      {}
       <View style={styles.graphContainer}>
         <View style={styles.circle}>
           <Text style={styles.circleText}>Gráfico</Text>
         </View>
+        <View style={styles.buttonsRightContainer}>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>1</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>2</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>3</Text>
+          </TouchableOpacity>
+        </View>
       </View>
 
-      {/* Cards de Opções */}
+      {}
       <View style={styles.cardsContainer}>
         <View style={styles.card}>
           <Text style={styles.cardTitle}>Design</Text>
@@ -27,7 +56,7 @@ const App = () => {
         </View>
       </View>
 
-      {/* Botões Circulares Inferiores */}
+      {}
       <View style={styles.buttonsContainer}>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>1</Text>
@@ -37,6 +66,9 @@ const App = () => {
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>3</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>4</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
@@ -50,8 +82,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F5F5',
   },
   graphContainer: {
+    flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 40,
+    marginVertical: 40,
+    borderWidth: 2,           
+    borderColor: 'black',     
+    borderRadius: 10,         
+    padding: 10,              
   },
   circle: {
     width: 200,
@@ -60,15 +97,21 @@ const styles = StyleSheet.create({
     backgroundColor: '#E0E0E0',
     justifyContent: 'center',
     alignItems: 'center',
+    marginHorizontal: 30,
   },
   circleText: {
     fontSize: 16,
     fontWeight: 'bold',
   },
+  buttonsRightContainer: {
+    flexDirection: 'column',
+    marginLeft: 20, 
+  },
   cardsContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginBottom: 40,
+    marginTop: 20,
   },
   card: {
     width: 100,
@@ -83,6 +126,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 8,
     elevation: 5,
+    marginVertical: 10,
   },
   cardTitle: {
     fontSize: 16,
@@ -96,6 +140,7 @@ const styles = StyleSheet.create({
   buttonsContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
+    marginVertical: 20,
   },
   button: {
     width: 60,
@@ -104,6 +149,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#DDD',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 10,
   },
   buttonText: {
     fontSize: 18,
